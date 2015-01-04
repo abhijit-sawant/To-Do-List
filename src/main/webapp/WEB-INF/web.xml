@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+        <servlet-name>todohome</servlet-name>
+        <servlet-class>com.app.todolst.ToDoHomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>todohome</servlet-name>
+        <url-pattern>/todohome</url-pattern>
+    </servlet-mapping>	
+	
+	<servlet>
+        <servlet-name>todoaddfile</servlet-name>
+        <servlet-class>com.app.todolst.ToDoAddFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>todoaddfile</servlet-name>
+        <url-pattern>/todoaddfile</url-pattern>
+    </servlet-mapping>		
+	
+	<servlet>
+        <servlet-name>todoeditfile</servlet-name>
+        <servlet-class>com.app.todolst.ToDoEditFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>todoeditfile</servlet-name>
+        <url-pattern>/todoeditfile</url-pattern>
+    </servlet-mapping>	
+	
+    <welcome-file-list>
+        <welcome-file>todohome</welcome-file>
+    </welcome-file-list>
+
+	<security-constraint>
+        <web-resource-collection>
+            <url-pattern>/</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>*</role-name>
+        </auth-constraint>
+    </security-constraint>	
+</web-app>

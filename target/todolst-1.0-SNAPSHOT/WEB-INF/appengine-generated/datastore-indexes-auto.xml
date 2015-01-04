@@ -1,0 +1,10 @@
+<!-- Indices written at Sat, 3 Jan 2015 18:59:22 EST -->
+
+<datastore-indexes>
+
+    <!-- Used 1 time in query history -->
+    <datastore-index kind="ToDoFile" ancestor="true" source="manual">
+        <property name="date" direction="desc"/>
+    </datastore-index>
+
+</datastore-indexes>
